@@ -3,8 +3,6 @@
  
 ### To Acess the database:
 ```
- Download the repo
- cd into it and npm i
  $ heroku login
  $ heroku pg:psql --app trailmixin
 ```
