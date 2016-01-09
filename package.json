@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/alexG53090/MR-back-end-dev#readme",
   "dependencies": {
+    "dotenv": "^1.2.0",
     "knex": "^0.9.0",
     "pg": "^4.4.3"
   },
