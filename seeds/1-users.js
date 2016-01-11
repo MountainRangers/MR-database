@@ -24,7 +24,7 @@ exports.seed = function(knex, Promise) {
         email: 'user3@gmail.com',
         profile_photo_url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNq_riPddaKSMsGEwdbyOXpz-JoERWiehOgWggHNegxZUhnieUtags.',
         personal_info: 'I am user3 and I love hiking in NC'
-      }),
+      })
     ]);
   });
 };
