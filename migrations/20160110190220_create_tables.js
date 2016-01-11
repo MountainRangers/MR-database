@@ -4,7 +4,7 @@ exports.up = function(knex, Promise) {
       table.increments('id').primary();
       table.date('date_joined');
       table.string('username', 20);
-      table.string('email', 50);
+      table.string('google_id');
       table.string('photo_url', 500);
       table.text('personal_info');
     }),
