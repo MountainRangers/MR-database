@@ -17,16 +17,16 @@ exports.seed = function(knex, Promise) {
         body: 'I loved this hike!  Cannot wait to do it again.  Too tough for Grandma',
         latitude: '40.254902',
         longitude: '-105.616089',
-        user_id: 3
+        user_id: 2
       }),
       knex('posts').insert({
-        id: 1,
+        id: 3,
         date_posted: '1/3/2016',
         title: 'Devils Head Hike',
         body: 'I loved this hike!  Cannot wait to do it again.  Cool fire tower at the top',
         latitude: '39.26973158',
         longitude: '-105.104857',
-        user_id: 2
+        user_id: 3
       })
     ]);
   });
