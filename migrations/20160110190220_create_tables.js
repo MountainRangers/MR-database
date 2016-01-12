@@ -2,7 +2,8 @@ exports.up = function(knex, Promise) {
   return Promise.all([
     knex.schema.createTableIfNotExists('users', function(table) {
       table.increments('id').primary();
-      table.date('date_joined');
+      table.timestamp('created_at').defaultTo(knex.fn.now());
+      table.timestamp('updated_at').defaultTo(knex.fn.now());
       table.string('username', 20);
       table.string('google_id');
       table.string('photo_url', 500);
@@ -10,7 +11,8 @@ exports.up = function(knex, Promise) {
     }),
     knex.schema.createTableIfNotExists('posts', function(table) {
       table.increments('id').primary();
-      table.dateTime('date_posted');
+      table.timestamp('created_at').defaultTo(knex.fn.now());
+      table.timestamp('updated_at').defaultTo(knex.fn.now());
       table.string('title');
       table.text('body');
       table.string('latitude');
@@ -29,12 +31,11 @@ exports.up = function(knex, Promise) {
 };
 
 
-
 exports.down = function(knex, Promise) {
   return Promise.all([
-    knex.schema.dropTableIfExists('users'),
-    knex.schema.dropTableIfExists('posts'),
+    knex.schema.dropTableIfExists('posts_tags'),
     knex.schema.dropTableIfExists('tags'),
-    knex.schema.dropTableIfExists('posts_tags')
+    knex.schema.dropTableIfExists('posts'),
+    knex.schema.dropTableIfExists('users'),
   ]);
 };
