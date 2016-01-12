@@ -22,7 +22,7 @@ exports.seed = function(knex, Promise) {
         date_joined: '1/3/2016',
         username: 'user3',
         google_id: '59860983',
-        photo_url: 'https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTNq_riPddaKSMsGEwdbyOXpz-JoERWiehOgWggHNegxZUhnieUtags.',
+        photo_url: 'http://www.pamperedpetz.net/wp-content/uploads/2015/09/Puppy1.jpg',
         personal_info: 'I am user3 and I love hiking in NC'
       })
     ]);
