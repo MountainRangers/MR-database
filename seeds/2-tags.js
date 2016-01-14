@@ -9,6 +9,18 @@ exports.seed = function(knex, Promise) {
       }),
       knex('tags').insert({
         name: 'lake'
+      }),
+      knex('tags').insert({
+        name: 'urban'
+      }),
+      knex('tags').insert({
+        name: 'tree'
+      }),
+      knex('tags').insert({
+        name: 'feather'
+      }),
+      knex('tags').insert({
+        name: 'all'
       })
     ]);
   });
