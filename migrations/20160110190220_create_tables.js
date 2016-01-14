@@ -25,7 +25,7 @@ exports.up = function(knex, Promise) {
       table.string('name');
     }),
     knex.schema.createTableIfNotExists('posts_tags', function(table) {
-      table.integer('post_id').references('id').inTable('posts');
+      table.integer('post_id').references('id').inTable('posts').onDelete('CASCADE');
       table.integer('tag_id').references('id').inTable('tags');
     })
   ]);
