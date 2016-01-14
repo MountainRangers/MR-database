@@ -21,6 +21,27 @@ exports.seed = function(knex, Promise) {
         latitude: '39.26973158',
         longitude: '-105.104857',
         user_id: 3
+      }),
+      knex('posts').insert({
+        title: 'Collegiate Peaks',
+        body: 'I loved this hike!  Cannot wait to do it again',
+        latitude: '39.374912',
+        longitude: '-104.853859',
+        user_id: 1
+      }),
+      knex('posts').insert({
+        title: 'Hanging Lake',
+        body: 'I loved this hike!  Slippery',
+        latitude: '39.374912',
+        longitude: '-104.853859',
+        user_id: 2
+      }),
+      knex('posts').insert({
+        title: 'Pelican Lake',
+        body: 'I loved this hike!  Lots of snow',
+        latitude: '39.374912',
+        longitude: '-104.853859',
+        user_id: 3
       })
     ]);
   });
