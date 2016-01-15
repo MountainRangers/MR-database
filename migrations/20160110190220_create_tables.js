@@ -18,7 +18,7 @@ exports.up = function(knex, Promise) {
       table.text('body');
       table.string('latitude');
       table.string('longitude');
-      table.integer('user_id').references('id').inTable('users');
+      table.integer('user_id').references('id').inTable('users').onDelete('CASCADE');
     }),
     knex.schema.createTableIfNotExists('tags', function(table) {
       table.increments('id').primary();
@@ -26,7 +26,7 @@ exports.up = function(knex, Promise) {
     }),
     knex.schema.createTableIfNotExists('posts_tags', function(table) {
       table.integer('post_id').references('id').inTable('posts').onDelete('CASCADE');
-      table.integer('tag_id').references('id').inTable('tags');
+      table.integer('tag_id').references('id').inTable('tags').onDelete('CASCADE');
     })
   ]);
 };
