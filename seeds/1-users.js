@@ -111,6 +111,6 @@ exports.seed = function(knex, Promise) {
         google_id: '59860983',
         photo_url: 'https://students-gschool-production.s3.amazonaws.com/uploads/user/avatar/717/card_15-10-FS-DP-5624.jpg',
         personal_info: 'I am user3 and I love hiking in NC'
-      }),
+      })
     ]);
   };
